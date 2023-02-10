@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo -e "👋 Hello, I am going to setup WordPress for you."
 cp .env.sample .env
