@@ -7,7 +7,8 @@ source .env
 wp --info
 wp core install --url="https://${WORDPRESS_URL}" --title="${WORDPRESS_TITLE}" --admin_user="${WORDPRESS_USERNAME}" --admin_password="${WORDPRESS_PASSWORD}" --admin_email="${WORDPRESS_EMAIL}" --skip-email
 wp theme activate nextjs-wordpress-theme
-wp theme delete twentytwenty twentytwentyone
+# NOTE: These will need updating every few months.
+wp theme delete twentytwentythree twentytwentytwo
 wp plugin delete akismet hello
 wp plugin activate --all
 wp post create --post_type="page" --post_title="Homepage" --post_content="<!-- wp:paragraph --><p>Welcome to the homepage. Feel free to edit this page.</p><!-- /wp:paragraph -->" --post_status="publish"
