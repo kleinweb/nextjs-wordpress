@@ -5,11 +5,12 @@ echo -e "👋 Hello, I am going to setup WordPress for you."
 sleep 2
 
 echo -e "Reading ENV vars..."
+# shellcheck source=/dev/null
 source .env
 sleep 1
 
 echo -e "Running Composer..."
-cd wp-content
+cd wp-content || exit
 composer install --prefer-dist --no-dev
 cd ..
 
@@ -28,5 +29,3 @@ echo -e "Visit https://${WORDPRESS_URL}/wp-admin to log into WordPress."
 echo -e "username: ${WORDPRESS_USERNAME}"
 echo -e "password: ${WORDPRESS_PASSWORD}"
 exit 0
-
-
