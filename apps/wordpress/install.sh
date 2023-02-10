@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo -e "👋 Hello, I am going to setup WordPress for you."
-cp .env.sample .env
+[[ -e ".env" ]] || cp .env.sample .env
 sleep 2
 
 echo -e "Reading ENV vars..."
